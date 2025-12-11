@@ -1,6 +1,6 @@
 {
   "name": "@manptl553-oss/bit-workflow",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "license": "MIT",
   "type": "module",
   "publishConfig": {
@@ -15,8 +15,8 @@
       "import": "./dist/src/index.js",
       "require": "./dist/src/index.cjs"
     },
-    "./style.css": "./dist/index.css",
-    "./dist/index.css": "./dist/index.css"
+    "./style.css": "./dist/bit-workflow.css",
+    "./dist/index.css": "./dist/bit-workflow.css"
   },
   "files": [
     "dist",
