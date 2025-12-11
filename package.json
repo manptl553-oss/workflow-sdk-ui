@@ -1,6 +1,6 @@
 {
-  "name": "@black-ink-technologies/bit-workflow-engine",
-  "version": "1.0.2",
+  "name": "@manptl553-oss/bit-workflow-engine",
+  "version": "1.0.3",
   "license": "MIT",
   "type": "module",
   "publishConfig": {
