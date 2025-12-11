@@ -81,4 +81,7 @@ export default defineConfig({
     target: 'es2020',
     outDir: 'dist',
   },
+  optimizeDeps: {
+  exclude: ["uuid"]
+}
 });
