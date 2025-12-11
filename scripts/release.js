@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import fs from "fs";
 
-function run(cmd: string) {
+function run(cmd) {
   console.log(`\n🛠️  Running: ${cmd}`);
   execSync(cmd, { stdio: "inherit" });
 }
