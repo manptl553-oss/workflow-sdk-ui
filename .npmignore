@@ -1,0 +1,17 @@
+# Source files
+src/
+scripts/
+
+# Config files
+tsconfig.json
+
+# Node modules
+node_modules/
+
+# Other
+.gitignore
+*.log
+*.test.js
+*.spec.js
+
+.npmrc

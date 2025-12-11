@@ -1,0 +1,11 @@
+:root {
+  --color-maastrichtblue: #0b1739;
+  --color-primary: #7ec040;
+  --color-charcoal: #343b4f;
+  --color-gunmetal: #293138;
+  --shadow-sidebar: 0 8px 28px rgba(35, 54, 112, 30%);
+  --shadow-inputout: -1px 3px 11px 0px #0000002b;
+}
+.card-gradient-color {
+  background: linear-gradient(177deg, #6db92a 1%, #487c19 95%);
+}

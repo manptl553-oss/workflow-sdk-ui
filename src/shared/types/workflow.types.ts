@@ -1,0 +1,101 @@
+// src/core/types/workflow.types.ts
+
+export interface WorkflowNode {
+  id: string;
+  name: string;
+  type: string; // NodeTypeProps as string to avoid circular dependency
+  parentNode?: string;
+  parentId?: string | null;
+  templateId?: string;
+  versionId: string;
+  description?: string;
+  retryAttempts: number;
+  retryDelayMs: number;
+  position: { x: number; y: number };
+  config?: Record<string, any>;
+  data?: Record<string, any>;
+}
+
+export interface WorkflowEdge {
+  id: string;
+  sourceId: string;
+  targetId: string;
+  versionId: string;
+  condition?: string;
+  groupId?: string | null;
+  expression: string;
+}
+
+export interface VersionData {
+  id: string;
+  name: string;
+  workflowId: string;
+  version: number;
+  status: string;
+  publishedBy: string;
+  updatedBy: string;
+  nodes?: WorkflowNode[];
+  edges?: WorkflowEdge[];
+}
+
+export interface Workflow {
+  id: string;
+  name: string;
+  slug?: string;
+  version: VersionData;
+  description?: string;
+  enabled?: boolean;
+  lastModified?: string;
+  nodes?: WorkflowNode[];
+  edges?: WorkflowEdge[];
+}
+
+export interface WorkflowResponse {
+  data: Workflow[];
+}
+
+export interface WorkflowCardProps {
+  workflow: {
+    id: string;
+    name: string;
+    description?: string;
+    created_at?: string;
+    enabled?: boolean;
+  };
+  onDelete?: (id: string) => void;
+  onOpen: () => void;
+}
+
+export interface GroupIds {
+  id: string;
+  name: string;
+}
+export type NodeExecutionEvent = Record<string, Record<string, unknown>>;
+
+export interface SaveWorkFlowPayload {
+  versionId: string;
+  name: string;
+  description?: string;
+  slug?: string;
+
+  nodes: WorkflowNode[];
+  edges: WorkflowEdge[];
+
+  deletedNodes: string[];
+  deletedEdges: string[];
+}
+
+export interface EventsType {
+  id: string;
+  name: string;
+  description: string;
+  visibility: boolean;
+}
+export interface EventTriggerOptions {
+  id: string;
+  appName: string;
+  order: number;
+  visibility: boolean;
+  children: EventTriggerOptions[];
+  events: EventsType[];
+}
