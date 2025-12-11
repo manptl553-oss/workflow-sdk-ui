@@ -1,6 +1,6 @@
 {
   "name": "@manptl553-oss/bit-workflow",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "license": "MIT",
   "type": "module",
   "publishConfig": {
@@ -53,7 +53,7 @@
     "@hookform/resolvers": "^3.0.0 || ^4.0.0 || >=5.0.0",
     "react-hook-form": ">=7",
     "react-select": "^5.10.2",
-    "uuid": "^9.0.0",
+    "uuid": ">=9.0.0 <14.0.0",
     "zod": "^3.0.0 || ^>=4.0.0"
   },
   "devDependencies": {
